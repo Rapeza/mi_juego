@@ -21,7 +21,7 @@ p, h2{
 	float: left;
 	position: relative;
 	width: 33%;
-	cursor: crosshair;
+	cursor: grab;
 }
 
 .contenedor .items .objeto{
@@ -37,6 +37,12 @@ p, h2{
 
 .contenedor .items.activo .objeto{
 	height: 70px;
+	cursor: grabbing;
+}
+
+.contenedor .items.activo:hover .objeto{
+
+	cursor: grabbing;
 }
 
 .contenedor .items .hueco{
@@ -49,13 +55,16 @@ p, h2{
 }
 
 @media only screen and (max-width: 600px) {
+	body, html{
+		
+	}
 
 	p, h2{
 		margin-left: 20px;
 	}
 
 	p{
-		font-size: 20px;
+		font-size: 25px;
 	}
 	
 	.contenedor{
